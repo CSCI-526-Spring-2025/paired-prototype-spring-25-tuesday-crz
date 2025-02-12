@@ -18,6 +18,7 @@ public class PortalIdentifier : MonoBehaviour
         // Move to that position
         foreach (Transform obj in movable)
         {
+            Debug.Log($"Moving object to previous portal. {prevPortalID}");
             obj.position = PortalManager.GetPortalX(prevPortalID);
         }
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7050012803324044158}
   - component: {fileID: 5383808955415449400}
   m_Layer: 0
-  m_Name: Wrong Portal
+  m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5406153967857679306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.621851, y: -1.764849, z: -0.09390317}
+  m_LocalPosition: {x: 0, y: -1.764849, z: -0.09390317}
   m_LocalScale: {x: 0.7298683, y: 1.2456, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,8 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a6b37cd2f9f54a94b2c0ce696f5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movable: []
-  newPosition: {x: -15.2729, y: 3.821555, z: -0.03138559}
+  isCorrect: 0
 --- !u!61 &5383808955415449400
 BoxCollider2D:
   m_ObjectHideFlags: 0
