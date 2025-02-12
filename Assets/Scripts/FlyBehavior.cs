@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class FlyBehavior : MonoBehaviour
 {
-    [SerializeField] private float _velocity = 1.5f;
+    [SerializeField] private float _velocity = 20.5f;
 
     private Rigidbody2D _rigidbody2D;
 
