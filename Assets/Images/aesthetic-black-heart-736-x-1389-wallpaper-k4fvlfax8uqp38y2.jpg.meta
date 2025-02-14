@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b87a9774c8ba34a639bb41eee2f36357
+guid: 292f9347a00d14c218975415e00f986a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8889427677200108746
-    second: Polygon 2 (2)_0
+      213: 270541207897817645
+    second: aesthetic-black-heart-736-x-1389-wallpaper-k4fvlfax8uqp38y2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Polygon 2 (2)_0
+      name: aesthetic-black-heart-736-x-1389-wallpaper-k4fvlfax8uqp38y2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 209
-        height: 155
+        width: 477
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: accc90ccf579d5b70800000000000000
-      internalID: 8889427677200108746
+      spriteID: d22cad19bc721c300800000000000000
+      internalID: 270541207897817645
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      aesthetic-black-heart-736-x-1389-wallpaper-k4fvlfax8uqp38y2_0: 270541207897817645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
