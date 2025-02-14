@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class PortalCollision : MonoBehaviour
 {
-    public bool isCorrect = false;
+    public int portalID;
     void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("Collision with 2D Rectangle detected!");
         PortalIdentifier parentScript = transform.parent.GetComponent<PortalIdentifier>();
 
-        if (!isCorrect && parentScript != null)
+        if (parentScript != null)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
-            parentScript.moveToPreviousPortal();
+            parentScript.handleCollision(portalID);
         }
     }
 }

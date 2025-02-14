@@ -11,7 +11,7 @@ public static class PortalManager
 
     public static void AddPortal(int portalID, float xCoordinate)
     {
-        Debug.Log($"Adding portal {portalID} at Coord {xCoordinate}");
+        Debug.Log($"Adding portal {portalID} at X coordinate {xCoordinate}");
         float adjustedXCoordinate = initialXCoordinate - (xCoordinate - leftAdjustX);
         portalCoordinates.Add(portalID, new Vector3(adjustedXCoordinate, yCoordinate, zCoordinate));
     }
