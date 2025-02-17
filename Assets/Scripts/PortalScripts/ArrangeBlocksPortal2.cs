@@ -7,6 +7,8 @@ public class ArrangeBlocksPortal2 : ArrangeBlocks
     public Transform rect2;
     public Transform p0;
     public Transform p1;
+    public Transform symbol0;
+    public Transform symbol1;
     public float topY = 5f;  // The Y coordinate of the topmost point
     public float totalHeight = 10f; // Total height within which to space them
 
@@ -18,6 +20,8 @@ public class ArrangeBlocksPortal2 : ArrangeBlocks
             return;
         }
         Arrange(new Transform[] { rect0, rect1, rect2 },
-            new Transform[] { p0, p1 }, totalHeight, topY);
+            new Transform[] { p0, p1 }, 
+            new Transform[] { symbol0, symbol1 },
+            totalHeight, topY);
     }
 }

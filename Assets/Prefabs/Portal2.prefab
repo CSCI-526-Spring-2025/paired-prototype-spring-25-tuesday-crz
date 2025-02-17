@@ -52,11 +52,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _padding: 0.1
   useDefaultBlockHeight: 1
-  rect1: {fileID: 8382680557753045412}
-  rect2: {fileID: 5453714071568215989}
-  rect3: {fileID: 8152286651415458941}
-  p1: {fileID: 1792937853744497746}
-  p2: {fileID: 21814457928842565}
+  rect0: {fileID: 8382680557753045412}
+  rect1: {fileID: 5453714071568215989}
+  rect2: {fileID: 8152286651415458941}
+  p0: {fileID: 1792937853744497746}
+  p1: {fileID: 21814457928842565}
   topY: 5
   totalHeight: 8.56
 --- !u!114 &7665746023671893344
