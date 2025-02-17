@@ -14,7 +14,7 @@ public class FallingObjectsSpawner : MonoBehaviour
     {   
         Debug.Log("Spawner Script Started");
         screenHeight = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
-        //StartCoroutine(SpawnFallingObjects());
+        StartCoroutine(SpawnFallingObjects());
     }
 
     IEnumerator SpawnFallingObjects()

@@ -9,7 +9,7 @@ public class SpawnObstacle : MonoBehaviour // Class name matches the file name
 
     private void Start()
     {
-        //InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval); // Method renamed
+        InvokeRepeating(nameof(SpawnObstaclePair), 1f, spawnInterval); // Method renamed
     }
 
     private void SpawnObstaclePair() // Renamed method to avoid conflict
