@@ -14,7 +14,7 @@ public class FallingObjectsSpawner : MonoBehaviour
     {   
         Debug.Log("Spawner Script Started");
         screenHeight = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
-        StartCoroutine(SpawnFallingObjects());
+        //StartCoroutine(SpawnFallingObjects());
     }
 
     IEnumerator SpawnFallingObjects()
@@ -41,7 +41,7 @@ public class FallingObjectsSpawner : MonoBehaviour
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(0, spawnFromTop ? -fallSpeed : fallSpeed);
 
-        Debug.Log($"Spawning at X: {randomX}, Y: {spawnY}");
+        //Debug.Log($"Spawning at X: {randomX}, Y: {spawnY}");
 
         // ✅ Add SpriteRenderer for visibility
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();

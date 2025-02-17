@@ -24,7 +24,7 @@ public static class PortalManager
         }
         else
         {
-            Debug.LogWarning("Portal ID not found.");
+            Debug.LogWarning($"Portal ID {portalID} not found.");
             return new Vector3(initialXCoordinate, yCoordinate, zCoordinate);
         }
     }

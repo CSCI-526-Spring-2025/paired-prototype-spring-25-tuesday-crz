@@ -18,12 +18,19 @@ public class PortalIdentifier : MonoBehaviour
         {
             // Get random integer from 0 to portalID
             int prevPortalID = Random.Range(0, portalColumnID);
+            if(portalColumnID == 0)
+            {
+                prevPortalID = -1;
+            }
 
             // Move to that position
             foreach (Transform obj in movable)
             {
-                Debug.Log($"Moving to previous portal {prevPortalID}");
-                obj.position = PortalManager.GetPortalX(prevPortalID);
+                if (obj != null)
+                {
+                    Debug.Log($"Moving to previous portal {prevPortalID}");
+                    obj.position = PortalManager.GetPortalX(prevPortalID);
+                }
             }
         }
     }

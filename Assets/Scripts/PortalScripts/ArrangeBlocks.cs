@@ -1,11 +1,12 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public abstract class ArrangeBlocks : MonoBehaviour
 {
     [SerializeField] private float _padding = 0.25f;
     public bool useDefaultBlockHeight = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Arrange(Transform[] rects, Transform[] portals, float totalHeight, float topY)
+    public void Arrange(Transform[] rects, Transform[] portals, Transform[] symbols, float totalHeight, float topY)
     {
         // Get size of rects array
         int n = rects.Length;
@@ -19,6 +20,8 @@ public abstract class ArrangeBlocks : MonoBehaviour
             {
                 heights[i] = totalHeight/2f/(float)n;
                 rects[i].localScale = new Vector3(rects[i].localScale.x, heights[i], rects[i].localScale.z);
+                //if (i < symbols.Length && symbols[i] != null)
+                //    symbols[i].localScale = new Vector3(heights[i] - _padding, heights[i] - _padding, symbols[i].localScale.z);
             }
         }
 
@@ -34,7 +37,14 @@ public abstract class ArrangeBlocks : MonoBehaviour
 
         // Arrange the blocks
         float currentY = topY - heights[0] / 2f;
+        
+        // Set first block
         rects[0].position = new Vector3(rects[0].position.x, currentY, rects[0].position.z);
+        if (symbols[0] != null)
+        {
+            symbols[0].position = new Vector3(rects[0].position.x, currentY, rects[0].position.z);
+            symbols[0].GetComponent<Renderer>().sortingOrder = 21;
+        }
         for (int i = 1; i < n; i++)
         {
             // Set portal
@@ -45,6 +55,13 @@ public abstract class ArrangeBlocks : MonoBehaviour
             // Set block
             currentY -= (spacing / 2f + heights[i] / 2f);
             rects[i].position = new Vector3(rects[i].position.x, currentY, rects[i].position.z);
+
+            // Set symbol
+            if (i < symbols.Length && symbols[i] != null)
+            {
+                symbols[i].position = new Vector3(rects[i].position.x, currentY, rects[i].position.z);
+                symbols[i].GetComponent<Renderer>().sortingOrder = 21;
+            }
         }
     }
 }
