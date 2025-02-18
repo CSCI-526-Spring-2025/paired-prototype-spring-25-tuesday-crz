@@ -28,7 +28,6 @@ public class PortalIdentifier : MonoBehaviour
             {
                 if (obj != null)
                 {
-                    Debug.Log($"Moving to previous portal {prevPortalID}");
                     obj.position = PortalManager.GetPortalX(prevPortalID);
                 }
             }
