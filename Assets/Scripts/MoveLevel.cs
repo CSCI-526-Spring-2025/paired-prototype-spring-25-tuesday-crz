@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveLevel : MonoBehaviour
 {
-    [SerializeField] private float _velocity = 19.65f;
+    [SerializeField] private float _velocity = 0.1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

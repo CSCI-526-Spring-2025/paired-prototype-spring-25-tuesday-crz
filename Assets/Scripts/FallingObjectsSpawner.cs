@@ -4,9 +4,9 @@ using UnityEngine;
 public class FallingObjectsSpawner : MonoBehaviour
 {
     public GameObject fallingObjectPrefab; 
-    public float spawnInterval = 1.5f;
-    public float spawnXRange = 10f; // Controls width of spawn area beyond 285
-    public float fallSpeed = 3f; 
+    public float spawnInterval = 4f;
+    public float spawnXRange = 5f; // Controls width of spawn area beyond 285
+    public float fallSpeed = 0.2f; 
 
     private float screenHeight;
 
@@ -28,9 +28,8 @@ public class FallingObjectsSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        float randomX = Random.Range(285f, 285f + spawnXRange); // Ensuring X > 285
-        bool spawnFromTop = Random.value > 0.5f;
-        float spawnY = spawnFromTop ? screenHeight + 1f : -screenHeight - 1f;
+        float randomX = Random.Range(125f, 125f + spawnXRange); // Ensuring X > 285
+        float spawnY = screenHeight + 1f; // Always spawn from the top
 
         GameObject obj = Instantiate(fallingObjectPrefab, new Vector2(randomX, spawnY), Quaternion.identity);
 
@@ -38,10 +37,8 @@ public class FallingObjectsSpawner : MonoBehaviour
             obj.AddComponent<Rigidbody2D>();
 
         Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
-        rb.linearVelocity = new Vector2(0, spawnFromTop ? -fallSpeed : fallSpeed);
-
-        //Debug.Log($"Spawning at X: {randomX}, Y: {spawnY}");
+        rb.gravityScale = 1; // Enable natural gravity
+        rb.linearVelocity = Vector2.zero; // Remove any preset velocity
 
         // ✅ Add SpriteRenderer for visibility
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
