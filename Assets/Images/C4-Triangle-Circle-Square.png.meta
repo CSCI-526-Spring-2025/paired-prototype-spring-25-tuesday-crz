@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      C4-Triangle-Circle-Square_0: -562100579940281696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
